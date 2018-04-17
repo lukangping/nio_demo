@@ -41,7 +41,6 @@ public class MultiplexerTimeServer implements Runnable{
 
         if(key.isValid()){
             if(key.isAcceptable()){
-                key.channel()
             }
         }
 

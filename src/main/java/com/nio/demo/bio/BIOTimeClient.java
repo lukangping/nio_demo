@@ -17,6 +17,8 @@ public class BIOTimeClient {
 
             Socket socket = new Socket("127.0.0.1", 8081);
 
+            System.out.println(socket.getChannel());
+
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
             writer.println("what's the time?");
 

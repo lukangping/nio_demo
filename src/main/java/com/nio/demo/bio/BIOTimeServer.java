@@ -15,6 +15,9 @@ public class BIOTimeServer {
         Socket socket;
         while(true){
             socket = server.accept();
+            System.out.println(socket.getLocalAddress());
+            System.out.println(socket.getLocalPort());
+
             new Thread(new TimeServerHandler(socket)).start();
         }
 

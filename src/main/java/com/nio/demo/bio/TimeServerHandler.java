@@ -28,6 +28,7 @@ public class TimeServerHandler implements Runnable{
             while(true){
                 body = bufferedReader.readLine();
                 if(null != body && body.equals("what's the time?")){
+                    System.out.println(socket.getPort());
                     System.out.println("Time server receive: " + body);
                     PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
                     writer.println(System.currentTimeMillis());
